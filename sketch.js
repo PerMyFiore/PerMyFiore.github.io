@@ -297,6 +297,11 @@ function instructions() {
     displayWidth / 2,
     (displayHeight / 16) * 9
   );
+  text(
+    "Raggiungi 300 punti per vincere",
+    displayWidth / 2,
+    (displayHeight / 16) * 10
+  );
   pop();
   if (leave && !isplaying) {
     MENU = "HOME";
