@@ -20,7 +20,8 @@ let imgxfiore,
   imgplayback,
   imglost,
   imgwin,
-  song;
+  song,
+  imgsonetto;
 let bouncingxbibo, bouncingybibo, speedbouncingxbibo, speedbouncingybibo;
 let punti = 0;
 let bibo;
@@ -42,8 +43,8 @@ function preload() {
   imgditosu = loadImage("img/ditosu.png");
   imgditogiu = loadImage("img/ditogiu.png");
   imgplayback = loadImage("img/playback.jpg");
-  imgwin = loadImage("img/win.jpg"),
-  imglost = loadImage("img/lost.jpg");
+  (imgwin = loadImage("img/win.jpg")), (imglost = loadImage("img/lost.jpg"));
+  imgsonetto = loadImage("img/sonettoimg.jpg");
   song = loadSound("assets/music.mp3");
 }
 
@@ -167,6 +168,11 @@ function mouseClicked() {
     if (mouseY > displayHeight - displayWidth / 10 && mouseY < displayHeight) {
       MENU = "HOME";
       window.location.href = "disegno.jpg";
+    }
+    if (mouseX > displayWidth / 2 - displayHeight / 5 / 2 && mouseX < displayWidth / 2 + displayHeight / 5 / 2) {
+      if (mouseY > displayHeight / 10 * 6.5 - displayWidth / 5 / 2 && mouseY < displayHeight / 10 * 6.5 + displayWidth / 5 / 2) {
+        window.location.href = "sonetto.html";
+      }
     }
   }
 }
@@ -493,15 +499,30 @@ function win() {
     displayWidth,
     displayHeight
   );
+  fill("grey");
+  rect(
+    displayWidth / 2,
+    displayHeight / 10 * 6.5,
+    displayHeight / 5,
+    displayWidth / 5
+  );
   fill("white");
   textSize(displayWidth / 10);
   text("YOU WON", displayWidth / 2, displayHeight / 4);
+  text("sonetto", displayWidth / 2, displayHeight / 10 * 6.5);
   image(
     imgnontoccare,
     displayWidth / 2,
     displayHeight - displayWidth / 10 / 2,
     (displayWidth / 10) * 8,
     displayWidth / 10
+  );
+  image(
+    imgsonetto,
+    displayWidth / 2,
+    displayHeight / 10 * 6.5,
+    displayHeight / 5,
+    displayWidth / 5
   );
   pop();
 }
