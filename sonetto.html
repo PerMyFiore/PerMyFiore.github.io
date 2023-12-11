@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiore fiore</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #poem {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-top: 20px;
+            display: none;
+        }
+        #passwordPrompt {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>per fiore</h1>
+    <div id="passwordPrompt">
+        <label for="password">Enter Password: </label>
+        <input type="password" id="password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="poem">
+        <p>
+            Nel lungo trascorrere del giorno passato,<br>
+            ho notato un fiore riposar nel prato,<br>
+            solo, ma in compagnia se ne stava adagiato,<br>
+            indossando petali sotto un olmo datato<br>
+        </p>
+        <p>
+            questo fior, da vento e interperie non era affatto affranto,<br>
+            tra capelli d'erba danzava ogni giorno,<br>
+            ma aveva rugiada a decorarlo come pianto,<br>
+            e vestiva polline come fosse un adorno.<br>
+        </p>
+        <p>
+            Nel lungo trascorrere del giorno passato,<br>
+            un vento funesto si levò sul giardino,<br>
+            questo fior si ritrovò un petalo staccato,<br>
+            affrontando di petto il sommo divino,<br>
+        </p>
+        <p>
+            da poco vittorioso si leccò le ferite,<br>
+            lasciando tracce della silenziosa battaglia<br>
+            ma affranto<br>
+            paura diversa<br>
+        </p>
+        <p>
+            Nel lungo trascorrere dell'oggigiorno,<br>
+            ho notato un bombo ronzagli intorno.<br>
+        </p>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            // Replace 'yourpassword' with the actual password
+            if (password === 'FIORFIOREAO') {
+                document.getElementById('passwordPrompt').style.display = 'none';
+                document.getElementById('poem').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
