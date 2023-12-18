@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Google",
+    "url": "https://www.google.com",
+    "description": "A popular search engine."
+  },
+  {
+    "name": "GitHub",
+    "url": "https://www.github.com",
+    "description": "A web-based hosting service for version control using Git."
+  },
+  {
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "description": "A question and answer site for professional and enthusiast programmers."
+  }
+]
